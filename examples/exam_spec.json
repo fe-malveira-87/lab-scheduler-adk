@@ -1,8 +1,34 @@
 {
-  "_comment": "Exemplo de spec JSON para o transpilador. Será expandido conforme o schema for definido.",
   "agent_name": "exam_scheduler_agent",
-  "description": "Agente de agendamento de exames laboratoriais",
+  "description": "Agente de agendamento de exames laboratoriais com OCR, PII, RAG e scheduling via MCP",
+  "version": "0.1.0",
   "model": "gemini-2.0-flash",
-  "tools": [],
-  "instructions": ""
+  "instruction": "Você é um assistente de agendamento de exames laboratoriais. Seu fluxo de trabalho é: 1) Receber e processar imagens de pedidos médicos via OCR; 2) Identificar e anonimizar dados sensíveis do paciente (PII); 3) Consultar a base de conhecimento (RAG) para verificar preparos e requisitos dos exames; 4) Agendar os exames na disponibilidade do laboratório; 5) Confirmar o agendamento ao usuário via CLI. Sempre confirme os dados com o usuário antes de finalizar o agendamento.",
+  "tools": [
+    {
+      "name": "ocr_tool",
+      "description": "Extrai texto de imagens de pedidos médicos usando OCR",
+      "type": "mcp_sse",
+      "url": "http://localhost:8001/sse"
+    },
+    {
+      "name": "pii_tool",
+      "description": "Detecta e anonimiza dados pessoais sensíveis (PII) nos textos extraídos",
+      "type": "mcp_sse",
+      "url": "http://localhost:8002/sse"
+    },
+    {
+      "name": "rag_tool",
+      "description": "Consulta a base de conhecimento sobre preparos, requisitos e informações dos exames",
+      "type": "mcp_sse",
+      "url": "http://localhost:8003/sse"
+    },
+    {
+      "name": "scheduling_tool",
+      "description": "Verifica disponibilidade e agenda exames no sistema do laboratório",
+      "type": "mcp_sse",
+      "url": "http://localhost:8004/sse"
+    }
+  ],
+  "output": "cli"
 }
