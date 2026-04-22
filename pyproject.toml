@@ -9,6 +9,8 @@ dependencies = [
   "pydantic-settings>=2.0",
   "google-adk>=0.1.0",
   "jinja2>=3.0",
+  "mcp[cli]>=1.0",
+  "google-generativeai>=0.8",
 ]
 
 [project.optional-dependencies]
@@ -29,7 +31,7 @@ dev = [
 testpaths = ["tests"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["transpiler", "agents", "api", "guardrails", "shared"]
+packages = ["transpiler", "agents", "api", "guardrails", "shared", "mcp_servers"]
 
 [tool.ruff]
 line-length = 88
