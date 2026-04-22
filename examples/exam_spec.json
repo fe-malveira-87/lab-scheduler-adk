@@ -1,0 +1,8 @@
+{
+  "_comment": "Exemplo de spec JSON para o transpilador. Será expandido conforme o schema for definido.",
+  "agent_name": "exam_scheduler_agent",
+  "description": "Agente de agendamento de exames laboratoriais",
+  "model": "gemini-2.0-flash",
+  "tools": [],
+  "instructions": ""
+}

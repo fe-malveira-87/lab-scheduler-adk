@@ -1,0 +1,9 @@
+version: "3.12"
+
+# Serviços que serão adicionados:
+#   - ocr-mcp:   servidor MCP de OCR via SSE (porta 8001)
+#   - rag-mcp:   servidor MCP de RAG via SSE (porta 8002)
+#   - api:       FastAPI de agendamento (porta 8000)
+#   - chromadb:  banco vetorial (porta 8003) — opcional
+
+services: {}
