@@ -1,2 +1,3 @@
-# Pydantic schemas reutilizáveis — Exam, ScheduleRequest, etc.
-# Adicione os modelos aqui conforme os módulos forem implementados.
+from shared.models.agent_spec import AgentSpec, MCPToolSpec
+
+__all__ = ["AgentSpec", "MCPToolSpec"]
