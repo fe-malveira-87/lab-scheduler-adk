@@ -1,0 +1,902 @@
+[
+  {
+    "id": "HEM001",
+    "nome": "Hemograma Completo",
+    "sinonimos": ["CBC", "hemograma", "sangue completo", "eritrograma", "leucograma"],
+    "categoria": "hematologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (EDTA)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia células do sangue: hemácias, leucócitos e plaquetas"
+  },
+  {
+    "id": "HEM002",
+    "nome": "Reticulócitos",
+    "sinonimos": ["contagem de reticulócitos", "reticulometria"],
+    "categoria": "hematologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (EDTA)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia a produção de glóbulos vermelhos pela medula óssea"
+  },
+  {
+    "id": "HEM003",
+    "nome": "Coagulograma",
+    "sinonimos": ["tempo de protrombina", "TP", "TTPA", "INR", "TAP", "coagulação"],
+    "categoria": "hematologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (citrato)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia a capacidade de coagulação do sangue"
+  },
+  {
+    "id": "HEM004",
+    "nome": "Fibrinogênio",
+    "sinonimos": ["dosagem de fibrinogênio"],
+    "categoria": "hematologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (citrato)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Proteína essencial para a coagulação sanguínea"
+  },
+  {
+    "id": "HEM005",
+    "nome": "D-dímero",
+    "sinonimos": ["dímero D", "d dimer", "produtos de degradação da fibrina"],
+    "categoria": "hematologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (citrato)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Marcador de trombose e coagulação intravascular disseminada"
+  },
+  {
+    "id": "BIO001",
+    "nome": "Glicemia em Jejum",
+    "sinonimos": ["glicose em jejum", "glicemia de jejum", "açúcar no sangue", "glicose"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 8 a 12 horas",
+    "material_coletado": "Sangue venoso (fluoreto)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Mede a concentração de glicose no sangue em jejum"
+  },
+  {
+    "id": "BIO002",
+    "nome": "Hemoglobina Glicada",
+    "sinonimos": ["HbA1c", "A1c", "glicohemoglobina", "hemoglobina glicosilada"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (EDTA)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Avalia o controle glicêmico dos últimos 2 a 3 meses"
+  },
+  {
+    "id": "BIO003",
+    "nome": "Colesterol Total",
+    "sinonimos": ["colesterol", "colesterol total e frações"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 12 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Mede o colesterol total no sangue"
+  },
+  {
+    "id": "BIO004",
+    "nome": "HDL Colesterol",
+    "sinonimos": ["HDL", "colesterol bom", "lipoproteína de alta densidade"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 12 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Colesterol transportado por lipoproteínas de alta densidade"
+  },
+  {
+    "id": "BIO005",
+    "nome": "LDL Colesterol",
+    "sinonimos": ["LDL", "colesterol ruim", "lipoproteína de baixa densidade"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 12 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Colesterol transportado por lipoproteínas de baixa densidade"
+  },
+  {
+    "id": "BIO006",
+    "nome": "Triglicerídeos",
+    "sinonimos": ["triglicérides", "TG", "gordura no sangue", "triacilglicerol"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 12 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Mede a concentração de triglicerídeos no sangue"
+  },
+  {
+    "id": "BIO007",
+    "nome": "Creatinina",
+    "sinonimos": ["creatinina sérica", "função renal"],
+    "categoria": "bioquímica",
+    "preparo": "Evitar carne vermelha 24h antes",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Marcador da função renal"
+  },
+  {
+    "id": "BIO008",
+    "nome": "Ureia",
+    "sinonimos": ["ureia sérica", "BUN", "nitrogênio ureico"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia a função renal e o metabolismo proteico"
+  },
+  {
+    "id": "BIO009",
+    "nome": "Ácido Úrico",
+    "sinonimos": ["urato", "uricemia"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Mede o nível de ácido úrico no sangue; elevado na gota"
+  },
+  {
+    "id": "BIO010",
+    "nome": "TGO",
+    "sinonimos": ["AST", "aspartato aminotransferase", "transaminase oxalacética"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Enzima hepática indicadora de lesão celular"
+  },
+  {
+    "id": "BIO011",
+    "nome": "TGP",
+    "sinonimos": ["ALT", "alanina aminotransferase", "transaminase pirúvica", "GPT"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Enzima hepática mais específica para lesão do fígado"
+  },
+  {
+    "id": "BIO012",
+    "nome": "Gama GT",
+    "sinonimos": ["GGT", "gama glutamiltransferase", "gamaGT"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Enzima hepática elevada em doenças do fígado e uso de álcool"
+  },
+  {
+    "id": "BIO013",
+    "nome": "Fosfatase Alcalina",
+    "sinonimos": ["FA", "ALP", "fosfatase básica"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Enzima presente no fígado, ossos e intestino"
+  },
+  {
+    "id": "BIO014",
+    "nome": "Bilirrubinas Totais e Frações",
+    "sinonimos": ["bilirrubina total", "bilirrubina direta", "bilirrubina indireta", "bilirrubinas"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia a função hepática e icterícia"
+  },
+  {
+    "id": "BIO015",
+    "nome": "Proteínas Totais e Frações",
+    "sinonimos": ["albumina", "globulina", "proteínas séricas"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia o estado nutricional e a função hepática"
+  },
+  {
+    "id": "BIO016",
+    "nome": "Sódio",
+    "sinonimos": ["Na", "natremia", "sódio sérico", "eletrólitos"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Principal eletrólito do meio extracelular"
+  },
+  {
+    "id": "BIO017",
+    "nome": "Potássio",
+    "sinonimos": ["K", "calemia", "potássio sérico", "eletrólitos"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Principal eletrólito intracelular; essencial para função cardíaca"
+  },
+  {
+    "id": "BIO018",
+    "nome": "Cálcio Total",
+    "sinonimos": ["Ca", "calcemia", "cálcio sérico"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia o metabolismo ósseo e a função paratireoidiana"
+  },
+  {
+    "id": "BIO019",
+    "nome": "Ferro Sérico",
+    "sinonimos": ["ferro", "sideremia", "ferritina"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 8 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia as reservas de ferro do organismo"
+  },
+  {
+    "id": "BIO020",
+    "nome": "Ferritina",
+    "sinonimos": ["ferritina sérica", "reserva de ferro"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Proteína de armazenamento de ferro; marcador de anemia ferropriva"
+  },
+  {
+    "id": "BIO021",
+    "nome": "PCR",
+    "sinonimos": ["proteína C reativa", "proteína c-reativa", "inflamação"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Marcador de inflamação aguda e infecção"
+  },
+  {
+    "id": "BIO022",
+    "nome": "VHS",
+    "sinonimos": ["velocidade de hemossedimentação", "eritrossedimentação", "VSH"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (EDTA)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Marcador inespecífico de inflamação"
+  },
+  {
+    "id": "BIO023",
+    "nome": "Lactato Desidrogenase",
+    "sinonimos": ["LDH", "desidrogenase lática"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Enzima marcadora de lesão celular e hemólise"
+  },
+  {
+    "id": "BIO024",
+    "nome": "Creatina Quinase",
+    "sinonimos": ["CK", "CPK", "creatinoquinase", "creatina fosfoquinase"],
+    "categoria": "bioquímica",
+    "preparo": "Evitar exercícios físicos 24h antes",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Marcador de lesão muscular e infarto do miocárdio"
+  },
+  {
+    "id": "BIO025",
+    "nome": "Troponina",
+    "sinonimos": ["troponina I", "troponina T", "marcador cardíaco", "infarto"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Marcador altamente específico de lesão do músculo cardíaco"
+  },
+  {
+    "id": "BIO026",
+    "nome": "Lipase",
+    "sinonimos": ["lipase pancreática", "lipemia"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Enzima pancreática; elevada em pancreatite"
+  },
+  {
+    "id": "BIO027",
+    "nome": "Amilase",
+    "sinonimos": ["amilase sérica", "diastase"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Enzima digestiva elevada em pancreatite e doenças salivares"
+  },
+  {
+    "id": "HOR001",
+    "nome": "TSH",
+    "sinonimos": ["hormônio estimulante da tireoide", "tireotrofina", "tireoide"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Avalia a função da glândula tireoide"
+  },
+  {
+    "id": "HOR002",
+    "nome": "T4 Livre",
+    "sinonimos": ["T4L", "tiroxina livre", "T4 total", "tireoide"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio tireoidiano na fração ativa"
+  },
+  {
+    "id": "HOR003",
+    "nome": "T3 Livre",
+    "sinonimos": ["T3L", "triiodotironina livre", "T3 total"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio tireoidiano biologicamente mais ativo"
+  },
+  {
+    "id": "HOR004",
+    "nome": "Insulina",
+    "sinonimos": ["insulina basal", "insulinemia"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 8 a 12 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio pancreático regulador da glicose"
+  },
+  {
+    "id": "HOR005",
+    "nome": "Cortisol",
+    "sinonimos": ["cortisol sérico", "hidrocortisona", "hormônio do estresse"],
+    "categoria": "hormônios",
+    "preparo": "Coleta de manhã (8h); jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio do estresse produzido pela glândula suprarrenal"
+  },
+  {
+    "id": "HOR006",
+    "nome": "Prolactina",
+    "sinonimos": ["PRL", "hormônio lactogênico"],
+    "categoria": "hormônios",
+    "preparo": "Não ter relação sexual ou estimulação mamária nas 24h anteriores",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio relacionado à lactação e fertilidade"
+  },
+  {
+    "id": "HOR007",
+    "nome": "FSH",
+    "sinonimos": ["hormônio folículo-estimulante", "gonadotrofina"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio que regula a função reprodutiva"
+  },
+  {
+    "id": "HOR008",
+    "nome": "LH",
+    "sinonimos": ["hormônio luteinizante", "gonadotrofina"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio que regula a ovulação e a produção de testosterona"
+  },
+  {
+    "id": "HOR009",
+    "nome": "Testosterona Total",
+    "sinonimos": ["testosterona", "testosterona livre", "androgênio"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 4 horas; coletar de manhã",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Principal hormônio sexual masculino"
+  },
+  {
+    "id": "HOR010",
+    "nome": "Estradiol",
+    "sinonimos": ["E2", "estrogênio", "hormônio feminino"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Principal hormônio sexual feminino"
+  },
+  {
+    "id": "HOR011",
+    "nome": "Progesterona",
+    "sinonimos": ["hormônio do corpo lúteo", "gestação"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Hormônio essencial para a manutenção da gravidez"
+  },
+  {
+    "id": "HOR012",
+    "nome": "Beta HCG",
+    "sinonimos": ["HCG", "gonadotrofina coriônica", "teste de gravidez", "hcg quantitativo"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Hormônio da gravidez; detecta gestação precocemente"
+  },
+  {
+    "id": "HOR013",
+    "nome": "PTH",
+    "sinonimos": ["paratormônio", "hormônio paratireoidiano", "paratireoide"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Regula os níveis de cálcio e fósforo"
+  },
+  {
+    "id": "HOR014",
+    "nome": "Vitamina D",
+    "sinonimos": ["25-OH vitamina D", "calciferol", "vitamina D3", "colecalciferol"],
+    "categoria": "hormônios",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Vitamina essencial para absorção de cálcio e saúde óssea"
+  },
+  {
+    "id": "HOR015",
+    "nome": "Vitamina B12",
+    "sinonimos": ["cobalamina", "cianocobalamina", "B12"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Vitamina essencial para o sistema nervoso e formação de glóbulos vermelhos"
+  },
+  {
+    "id": "HOR016",
+    "nome": "Ácido Fólico",
+    "sinonimos": ["folato", "vitamina B9", "folacina"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Vitamina essencial para prevenção de anemia megaloblástica"
+  },
+  {
+    "id": "IMU001",
+    "nome": "Fator Reumatoide",
+    "sinonimos": ["FR", "fator reumatóide", "artrite reumatoide"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Anticorpo presente na artrite reumatoide e outras doenças autoimunes"
+  },
+  {
+    "id": "IMU002",
+    "nome": "FAN",
+    "sinonimos": ["ANA", "fator antinúcleo", "anticorpo antinuclear", "lúpus"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "3 dias úteis",
+    "descricao_curta": "Triagem para doenças autoimunes como lúpus eritematoso"
+  },
+  {
+    "id": "IMU003",
+    "nome": "Anti-CCP",
+    "sinonimos": ["anticorpo antipeptídeo citrulinado", "ACPA", "artrite reumatoide"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "3 dias úteis",
+    "descricao_curta": "Marcador específico para artrite reumatoide"
+  },
+  {
+    "id": "IMU004",
+    "nome": "IgE Total",
+    "sinonimos": ["imunoglobulina E", "alergia", "atopia"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Anticorpo elevado em alergias e parasitoses"
+  },
+  {
+    "id": "IMU005",
+    "nome": "Complemento C3 e C4",
+    "sinonimos": ["complemento", "C3", "C4", "sistema complemento"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Proteínas do sistema imune; reduzidas em lúpus ativo"
+  },
+  {
+    "id": "IMU006",
+    "nome": "Anti-TPO",
+    "sinonimos": ["anticorpo antitireoperoxidase", "tireoidite de Hashimoto", "tireoide autoimune"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Marcador de tireoidite autoimune de Hashimoto"
+  },
+  {
+    "id": "IMU007",
+    "nome": "Anti-Tireoglobulina",
+    "sinonimos": ["anti-TG", "anticorpo antitireoglobulina"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Anticorpo associado a doenças autoimunes da tireoide"
+  },
+  {
+    "id": "IMU008",
+    "nome": "Sorologias para Hepatite B",
+    "sinonimos": ["HBsAg", "anti-HBs", "HBeAg", "hepatite B"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Diagnóstico e monitoramento da infecção pelo vírus da hepatite B"
+  },
+  {
+    "id": "IMU009",
+    "nome": "Anti-HCV",
+    "sinonimos": ["sorologia hepatite C", "hepatite C", "HCV"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Triagem para infecção pelo vírus da hepatite C"
+  },
+  {
+    "id": "IMU010",
+    "nome": "Sorologia para HIV",
+    "sinonimos": ["teste HIV", "anti-HIV", "AIDS", "ELISA HIV"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Triagem para infecção pelo vírus HIV"
+  },
+  {
+    "id": "IMU011",
+    "nome": "VDRL",
+    "sinonimos": ["sífilis", "RPR", "sorologia sífilis"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Triagem para sífilis"
+  },
+  {
+    "id": "IMU012",
+    "nome": "Toxoplasmose IgG e IgM",
+    "sinonimos": ["toxoplasma", "sorologia toxoplasmose", "toxoplasma gondii"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Diagnóstico de infecção por Toxoplasma gondii"
+  },
+  {
+    "id": "IMU013",
+    "nome": "CMV IgG e IgM",
+    "sinonimos": ["citomegalovírus", "CMV", "sorologia CMV"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Diagnóstico de infecção por citomegalovírus"
+  },
+  {
+    "id": "MIC001",
+    "nome": "Urocultura",
+    "sinonimos": ["cultura de urina", "urina cultura", "infecção urinária"],
+    "categoria": "microbiologia",
+    "preparo": "Primeira urina da manhã; higiene genital prévia",
+    "material_coletado": "Urina (jato médio)",
+    "prazo_resultado": "3 a 5 dias úteis",
+    "descricao_curta": "Identifica bactérias causadoras de infecção urinária"
+  },
+  {
+    "id": "MIC002",
+    "nome": "Hemocultura",
+    "sinonimos": ["cultura de sangue", "bacteremia", "sepse"],
+    "categoria": "microbiologia",
+    "preparo": "Coleta durante pico febril",
+    "material_coletado": "Sangue venoso (frascos aeróbico e anaeróbico)",
+    "prazo_resultado": "5 a 7 dias úteis",
+    "descricao_curta": "Identifica microrganismos causadores de sepse"
+  },
+  {
+    "id": "MIC003",
+    "nome": "Coprocultura",
+    "sinonimos": ["cultura de fezes", "fezes cultura", "parasitológico"],
+    "categoria": "microbiologia",
+    "preparo": "Evitar antibióticos 48h antes",
+    "material_coletado": "Fezes",
+    "prazo_resultado": "5 dias úteis",
+    "descricao_curta": "Identifica bactérias patogênicas em fezes"
+  },
+  {
+    "id": "MIC004",
+    "nome": "Antibiograma",
+    "sinonimos": ["teste de sensibilidade", "TSA", "resistência bacteriana"],
+    "categoria": "microbiologia",
+    "preparo": "Realizado junto com cultura",
+    "material_coletado": "Variável conforme cultura",
+    "prazo_resultado": "5 a 7 dias úteis",
+    "descricao_curta": "Determina a sensibilidade de bactérias aos antibióticos"
+  },
+  {
+    "id": "MIC005",
+    "nome": "Swab de Nasofaringe",
+    "sinonimos": ["swab nasal", "swab nasofaríngeo", "PCR COVID", "influenza"],
+    "categoria": "microbiologia",
+    "preparo": "Não usar descongestionante nasal 2h antes",
+    "material_coletado": "Secreção nasofaríngea",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Coleta para diagnóstico de infecções respiratórias"
+  },
+  {
+    "id": "URI001",
+    "nome": "Urina I",
+    "sinonimos": ["EAS", "urinálise", "urina tipo 1", "exame de urina", "urina rotina", "sumário de urina"],
+    "categoria": "urinálise",
+    "preparo": "Primeira urina da manhã; higiene genital prévia",
+    "material_coletado": "Urina (jato médio)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Análise completa da urina: físico-química e microscopia"
+  },
+  {
+    "id": "URI002",
+    "nome": "Microalbuminúria",
+    "sinonimos": ["albumina urinária", "proteína na urina", "nefropatia"],
+    "categoria": "urinálise",
+    "preparo": "Urina de 24 horas ou amostra isolada",
+    "material_coletado": "Urina",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Detecta pequenas quantidades de albumina na urina; marcador renal"
+  },
+  {
+    "id": "URI003",
+    "nome": "Creatinina Urinária",
+    "sinonimos": ["creatinina na urina", "clearance de creatinina"],
+    "categoria": "urinálise",
+    "preparo": "Urina de 24 horas",
+    "material_coletado": "Urina (24 horas)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Avalia a filtração glomerular renal"
+  },
+  {
+    "id": "URI004",
+    "nome": "Pesquisa de Drogas na Urina",
+    "sinonimos": ["toxicológico", "drogas de abuso", "screening toxicológico"],
+    "categoria": "urinálise",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Urina",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Detecta substâncias psicoativas na urina"
+  },
+  {
+    "id": "GEN001",
+    "nome": "Cariótipo",
+    "sinonimos": ["cromossomos", "análise cromossômica", "citogenética"],
+    "categoria": "genética",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (EDTA)",
+    "prazo_resultado": "20 a 30 dias úteis",
+    "descricao_curta": "Analisa o número e estrutura dos cromossomos"
+  },
+  {
+    "id": "GEN002",
+    "nome": "Triagem Neonatal",
+    "sinonimos": ["teste do pezinho", "fenilcetonúria", "hipotireoidismo congênito"],
+    "categoria": "genética",
+    "preparo": "Realizar entre o 3º e 5º dia de vida",
+    "material_coletado": "Sangue capilar (calcâneo)",
+    "prazo_resultado": "7 a 15 dias úteis",
+    "descricao_curta": "Triagem de doenças genéticas e metabólicas no recém-nascido"
+  },
+  {
+    "id": "GEN003",
+    "nome": "PCR para BRCA1 e BRCA2",
+    "sinonimos": ["BRCA", "gene do câncer de mama", "predisposição genética"],
+    "categoria": "genética",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (EDTA)",
+    "prazo_resultado": "15 a 30 dias úteis",
+    "descricao_curta": "Detecta mutações associadas ao câncer de mama e ovário hereditário"
+  },
+  {
+    "id": "OUT001",
+    "nome": "PSA Total",
+    "sinonimos": ["antígeno prostático específico", "PSA", "próstata"],
+    "categoria": "outros",
+    "preparo": "Evitar ejaculação e toque retal 48h antes",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Marcador tumoral para triagem e monitoramento do câncer de próstata"
+  },
+  {
+    "id": "OUT002",
+    "nome": "CEA",
+    "sinonimos": ["antígeno carcinoembrionário", "marcador tumoral cólon"],
+    "categoria": "outros",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Marcador tumoral usado no monitoramento de câncer colorretal"
+  },
+  {
+    "id": "OUT003",
+    "nome": "CA 125",
+    "sinonimos": ["antígeno cancerígeno 125", "marcador tumoral ovário"],
+    "categoria": "outros",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Marcador tumoral para câncer de ovário"
+  },
+  {
+    "id": "OUT004",
+    "nome": "CA 19-9",
+    "sinonimos": ["antígeno carboidrato 19-9", "marcador tumoral pâncreas"],
+    "categoria": "outros",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Marcador tumoral para câncer de pâncreas e vias biliares"
+  },
+  {
+    "id": "OUT005",
+    "nome": "AFP",
+    "sinonimos": ["alfafetoproteína", "marcador tumoral fígado", "hepatocarcinoma"],
+    "categoria": "outros",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Marcador tumoral para hepatocarcinoma e tumores de células germinativas"
+  },
+  {
+    "id": "OUT006",
+    "nome": "Eritropoetina",
+    "sinonimos": ["EPO", "eritropoietina"],
+    "categoria": "outros",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Hormônio renal que estimula a produção de glóbulos vermelhos"
+  },
+  {
+    "id": "OUT007",
+    "nome": "Gasometria Arterial",
+    "sinonimos": ["gasometria", "pH sanguíneo", "equilíbrio ácido-base"],
+    "categoria": "outros",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue arterial",
+    "prazo_resultado": "Imediato",
+    "descricao_curta": "Avalia a oxigenação, ventilação e equilíbrio ácido-base"
+  },
+  {
+    "id": "OUT008",
+    "nome": "Líquido Cefalorraquidiano",
+    "sinonimos": ["LCR", "líquor", "punção lombar"],
+    "categoria": "outros",
+    "preparo": "Realizado por médico; não requer preparo específico",
+    "material_coletado": "Líquor (punção lombar)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Análise do líquido que envolve o cérebro e a medula espinhal"
+  },
+  {
+    "id": "OUT009",
+    "nome": "Parasitológico de Fezes",
+    "sinonimos": ["OPG", "exame de fezes", "parasitas", "verminose"],
+    "categoria": "outros",
+    "preparo": "Coletar em 3 dias alternados",
+    "material_coletado": "Fezes",
+    "prazo_resultado": "1 a 3 dias úteis",
+    "descricao_curta": "Detecta parasitas intestinais nas fezes"
+  },
+  {
+    "id": "OUT010",
+    "nome": "Pesquisa de Sangue Oculto nas Fezes",
+    "sinonimos": ["sangue oculto", "PSOF", "câncer colorretal triagem"],
+    "categoria": "outros",
+    "preparo": "Evitar carne vermelha e AINEs 3 dias antes",
+    "material_coletado": "Fezes",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Detecta sangramento oculto no trato gastrointestinal"
+  },
+  {
+    "id": "OUT011",
+    "nome": "Espermograma",
+    "sinonimos": ["espermiograma", "análise do sêmen", "fertilidade masculina"],
+    "categoria": "outros",
+    "preparo": "Abstinência sexual de 3 a 5 dias",
+    "material_coletado": "Sêmen",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Avalia quantidade, motilidade e morfologia dos espermatozoides"
+  },
+  {
+    "id": "OUT012",
+    "nome": "Papanicolau",
+    "sinonimos": ["citopatologia cervical", "colpocitologia", "preventivo", "colo do útero"],
+    "categoria": "outros",
+    "preparo": "Evitar relações sexuais e cremes vaginais 48h antes",
+    "material_coletado": "Células cervicais",
+    "prazo_resultado": "5 a 10 dias úteis",
+    "descricao_curta": "Triagem para câncer do colo do útero"
+  },
+  {
+    "id": "BIO028",
+    "nome": "Homocisteína",
+    "sinonimos": ["hiperhomocisteinemia", "risco cardiovascular"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Aminoácido associado a risco cardiovascular aumentado"
+  },
+  {
+    "id": "BIO029",
+    "nome": "Magnésio",
+    "sinonimos": ["Mg", "magnésio sérico"],
+    "categoria": "bioquímica",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Mineral importante para função muscular e nervosa"
+  },
+  {
+    "id": "BIO030",
+    "nome": "Fósforo",
+    "sinonimos": ["fosfato", "fósforo sérico", "hiperfosfatemia"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 8 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "Mesmo dia",
+    "descricao_curta": "Mineral associado ao metabolismo ósseo e renal"
+  },
+  {
+    "id": "HOR017",
+    "nome": "DHEAS",
+    "sinonimos": ["sulfato de deidroepiandrosterona", "DHEA-S", "androgênio adrenal"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Precursor de hormônios sexuais produzido pela suprarrenal"
+  },
+  {
+    "id": "HOR018",
+    "nome": "IGF-1",
+    "sinonimos": ["somatomedina C", "fator de crescimento insulínico", "GH"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 4 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Mediador do hormônio do crescimento; avalia acromegalia e deficiência de GH"
+  }
+]
