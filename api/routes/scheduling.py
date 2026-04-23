@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, HTTPException, Query
 
-from api.models import ScheduleRequest, ScheduleResponse, ScheduleStatus
+from api.models import ExamItem, ScheduleRequest, ScheduleResponse, ScheduleStatus
 
 router = APIRouter(prefix="/schedules", tags=["Agendamentos"])
 
@@ -11,14 +11,10 @@ router = APIRouter(prefix="/schedules", tags=["Agendamentos"])
 _store: dict[str, dict] = {}
 
 
-def _now() -> datetime:
-    return datetime.now(tz=timezone.utc)
-
-
 def _estimated_results_at(exams_count: int) -> datetime:
     # Regra fictícia: 2 dias base + 1 dia por exame adicional, máximo 7 dias
     days = min(2 + max(0, exams_count - 1), 7)
-    return _now() + timedelta(days=days)
+    return datetime.now(tz=timezone.utc) + timedelta(days=days)
 
 
 @router.post(
@@ -30,7 +26,7 @@ def _estimated_results_at(exams_count: int) -> datetime:
 )
 def create_schedule(request: ScheduleRequest) -> ScheduleResponse:
     schedule_id = str(uuid.uuid4())
-    now = _now()
+    now = datetime.now(tz=timezone.utc)
     record = {
         "schedule_id": schedule_id,
         "status": "scheduled",
@@ -65,8 +61,6 @@ def get_schedule(schedule_id: str) -> ScheduleResponse:
     record = _store.get(schedule_id)
     if record is None:
         raise HTTPException(status_code=404, detail=f"Agendamento '{schedule_id}' não encontrado.")
-    from api.models import ExamItem
-
     return ScheduleResponse(
         schedule_id=record["schedule_id"],
         status=record["status"],
@@ -114,7 +108,7 @@ def cancel_schedule(schedule_id: str) -> ScheduleStatus:
     if record["status"] == "cancelled":
         raise HTTPException(status_code=409, detail="Agendamento já foi cancelado.")
     record["status"] = "cancelled"
-    record["updated_at"] = _now()
+    record["updated_at"] = datetime.now(tz=timezone.utc)
     return ScheduleStatus(
         schedule_id=record["schedule_id"],
         status=record["status"],
