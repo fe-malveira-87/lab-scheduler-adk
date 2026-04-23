@@ -898,5 +898,105 @@
     "material_coletado": "Sangue venoso (soro)",
     "prazo_resultado": "2 dias úteis",
     "descricao_curta": "Mediador do hormônio do crescimento; avalia acromegalia e deficiência de GH"
+  },
+  {
+    "id": "BIO031",
+    "nome": "PCR Ultrassensível",
+    "sinonimos": ["PCR-us", "proteína C reativa ultrassensível", "hsC-RP", "risco cardiovascular"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 12 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Versão de alta sensibilidade da PCR; estratifica risco cardiovascular"
+  },
+  {
+    "id": "HOR019",
+    "nome": "GH",
+    "sinonimos": ["hormônio do crescimento", "somatotrofina", "growth hormone"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 8 horas; repouso de 30 minutos antes da coleta",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Avalia deficiência ou excesso de hormônio do crescimento"
+  },
+  {
+    "id": "HOR020",
+    "nome": "Androstenediona",
+    "sinonimos": ["androstenedione", "androgênio adrenal", "SOP", "hiperplasia adrenal"],
+    "categoria": "hormônios",
+    "preparo": "Jejum de 4 horas; coletar de manhã",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "3 dias úteis",
+    "descricao_curta": "Precursor de testosterona e estrogênio; avaliado em SOP e hiperplasia adrenal congênita"
+  },
+  {
+    "id": "IMU014",
+    "nome": "Rubéola IgG e IgM",
+    "sinonimos": ["sorologia rubéola", "rubella", "imunidade rubéola", "pré-natal"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Avalia imunidade ou infecção ativa por rubéola; obrigatório no pré-natal"
+  },
+  {
+    "id": "IMU015",
+    "nome": "EBV IgG e IgM",
+    "sinonimos": ["Epstein-Barr", "mononucleose", "anticorpo heterófilo", "sorologia EBV"],
+    "categoria": "imunologia",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Diagnóstico de mononucleose infecciosa causada pelo vírus Epstein-Barr"
+  },
+  {
+    "id": "MIC006",
+    "nome": "Cultura de Escarro",
+    "sinonimos": ["cultura de expectoração", "BAAR", "pesquisa de bacilo", "tuberculose"],
+    "categoria": "microbiologia",
+    "preparo": "Coletar primeira secreção da manhã antes de escovar os dentes",
+    "material_coletado": "Escarro",
+    "prazo_resultado": "5 a 60 dias úteis",
+    "descricao_curta": "Identifica Mycobacterium tuberculosis e outros patógenos respiratórios"
+  },
+  {
+    "id": "URI005",
+    "nome": "Proteinúria de 24 horas",
+    "sinonimos": ["proteína urinária 24h", "proteinúria", "proteína na urina"],
+    "categoria": "urinálise",
+    "preparo": "Coletar toda a urina produzida em 24 horas",
+    "material_coletado": "Urina (24 horas)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Quantifica perda de proteína urinária; avalia nefropatias e síndrome nefrótica"
+  },
+  {
+    "id": "OUT013",
+    "nome": "CA 15-3",
+    "sinonimos": ["antígeno cancerígeno 15-3", "marcador tumoral mama", "câncer de mama"],
+    "categoria": "outros",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "1 dia útil",
+    "descricao_curta": "Marcador tumoral usado no monitoramento do câncer de mama"
+  },
+  {
+    "id": "BIO032",
+    "nome": "Zinco Sérico",
+    "sinonimos": ["zinco", "Zn", "deficiência de zinco"],
+    "categoria": "bioquímica",
+    "preparo": "Jejum de 8 horas",
+    "material_coletado": "Sangue venoso (soro)",
+    "prazo_resultado": "2 dias úteis",
+    "descricao_curta": "Mineral essencial para imunidade, cicatrização e metabolismo"
+  },
+  {
+    "id": "GEN004",
+    "nome": "Teste de DNA para Paternidade",
+    "sinonimos": ["exame de paternidade", "DNA paternidade", "teste de parentesco"],
+    "categoria": "genética",
+    "preparo": "Não é necessário jejum",
+    "material_coletado": "Sangue venoso (EDTA) ou swab bucal",
+    "prazo_resultado": "10 a 20 dias úteis",
+    "descricao_curta": "Determina vínculo biológico de paternidade por análise do DNA"
   }
 ]
