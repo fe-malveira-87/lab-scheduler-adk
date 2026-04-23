@@ -38,11 +38,11 @@ def _apply_regex(text: str) -> list[PIIEntity]:
         for m in pattern.finditer(text):
             entities.append(
                 PIIEntity(
-                    tipo=tipo,
-                    valor_original=m.group(),
-                    valor_mascarado=_MASK[tipo],
-                    posicao_inicio=m.start(),
-                    posicao_fim=m.end(),
+                    type=tipo,
+                    original=m.group(),
+                    masked=_MASK[tipo],
+                    start=m.start(),
+                    end=m.end(),
                 )
             )
     return entities
@@ -68,7 +68,6 @@ def _apply_spacy(text: str, existing_spans: list[tuple[int, int]]) -> list[PIIEn
             else:
                 continue
 
-            # Não duplicar spans já detectados por regex
             overlap = any(
                 ent.start_char < end and ent.end_char > start
                 for start, end in existing_spans
@@ -78,11 +77,11 @@ def _apply_spacy(text: str, existing_spans: list[tuple[int, int]]) -> list[PIIEn
 
             entities.append(
                 PIIEntity(
-                    tipo=tipo,
-                    valor_original=ent.text,
-                    valor_mascarado=_MASK[tipo],
-                    posicao_inicio=ent.start_char,
-                    posicao_fim=ent.end_char,
+                    type=tipo,
+                    original=ent.text,
+                    masked=_MASK[tipo],
+                    start=ent.start_char,
+                    end=ent.end_char,
                 )
             )
         return entities
@@ -93,11 +92,10 @@ def _apply_spacy(text: str, existing_spans: list[tuple[int, int]]) -> list[PIIEn
 
 
 def _mask_text(text: str, entities: list[PIIEntity]) -> str:
-    # Ordenar do fim para o início para não deslocar posições
-    sorted_entities = sorted(entities, key=lambda e: e.posicao_inicio, reverse=True)
+    sorted_entities = sorted(entities, key=lambda e: e.start, reverse=True)
     result = text
     for entity in sorted_entities:
-        result = result[: entity.posicao_inicio] + entity.valor_mascarado + result[entity.posicao_fim :]
+        result = result[: entity.start] + entity.masked + result[entity.end :]
     return result
 
 
@@ -105,19 +103,18 @@ class PIIDetector:
     def detect_and_mask(self, text: str) -> PIIResult:
         if not text.strip():
             return PIIResult(
-                texto_original=text,
-                texto_anonimizado=text,
-                entidades=[],
+                original_text=text,
+                masked_text=text,
+                entities=[],
             )
 
         regex_entities = _apply_regex(text)
-        regex_spans = [(e.posicao_inicio, e.posicao_fim) for e in regex_entities]
+        regex_spans = [(e.start, e.end) for e in regex_entities]
 
         spacy_entities = _apply_spacy(text, regex_spans)
 
         all_entities = regex_entities + spacy_entities
-        # Ordenar por posição de início para consistência
-        all_entities.sort(key=lambda e: e.posicao_inicio)
+        all_entities.sort(key=lambda e: e.start)
 
         masked_text = _mask_text(text, all_entities)
 
@@ -128,7 +125,7 @@ class PIIDetector:
         )
 
         return PIIResult(
-            texto_original=text,
-            texto_anonimizado=masked_text,
-            entidades=all_entities,
+            original_text=text,
+            masked_text=masked_text,
+            entities=all_entities,
         )

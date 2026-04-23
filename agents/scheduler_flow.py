@@ -34,12 +34,9 @@ class SchedulerFlow:
         combined_text = "\n".join(raw_exams)
         logger.info("pii: %d chars", len(combined_text))
         pii_result = self._pii.detect_and_mask(combined_text)
-        if pii_result.tem_pii:
-            logger.warning(
-                "PII detectado: %d entidade(s) mascarada(s)", pii_result.total_entidades
-            )
-            # Usar exames do texto já anonimizado
-            safe_exams = [line.strip() for line in pii_result.texto_anonimizado.splitlines() if line.strip()]
+        if pii_result.has_pii:
+            logger.warning("pii: %d entities masked", pii_result.total_entities)
+            safe_exams = [line.strip() for line in pii_result.masked_text.splitlines() if line.strip()]
         else:
             safe_exams = raw_exams
 
@@ -58,7 +55,7 @@ class SchedulerFlow:
                 )
             else:
                 # Sem correspondência no RAG: inclui com código genérico
-                logger.warning("Exame sem correspondência no RAG: %r", exam_name)
+                logger.warning("rag miss: %r", exam_name)
                 enriched.append({"exam_name": exam_name, "exam_code": "DESCONHECIDO"})
 
         payload = {
@@ -82,7 +79,7 @@ class SchedulerFlow:
                 f"Erro ao chamar a API de agendamento: {exc}"
             ) from exc
 
-        logger.info("Agendamento criado: %s", schedule_response.get("schedule_id"))
+        logger.info("done: schedule_id=%s", schedule_response.get("schedule_id"))
         return {
             "exams": enriched,
             "pii_result": pii_result,

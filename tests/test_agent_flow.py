@@ -8,19 +8,19 @@ from guardrails.pii_models import PIIEntity, PIIResult
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
 
-def _make_pii_result(tem_pii: bool = False) -> PIIResult:
-    if not tem_pii:
+def _make_pii_result(has_pii: bool = False) -> PIIResult:
+    if not has_pii:
         return PIIResult(
-            texto_original="Hemograma Completo",
-            texto_anonimizado="Hemograma Completo",
-            entidades=[],
+            original_text="Hemograma Completo",
+            masked_text="Hemograma Completo",
+            entities=[],
         )
     return PIIResult(
-        texto_original="Paciente: João 123.456.789-09\nHemograma Completo",
-        texto_anonimizado="Paciente: [NOME] [CPF]\nHemograma Completo",
-        entidades=[
-            PIIEntity(tipo="nome", valor_original="João", valor_mascarado="[NOME]", posicao_inicio=10, posicao_fim=14),
-            PIIEntity(tipo="cpf", valor_original="123.456.789-09", valor_mascarado="[CPF]", posicao_inicio=15, posicao_fim=29),
+        original_text="Paciente: João 123.456.789-09\nHemograma Completo",
+        masked_text="Paciente: [NOME] [CPF]\nHemograma Completo",
+        entities=[
+            PIIEntity(type="nome", original="João", masked="[NOME]", start=10, end=14),
+            PIIEntity(type="cpf", original="123.456.789-09", masked="[CPF]", start=15, end=29),
         ],
     )
 
@@ -108,7 +108,7 @@ def test_fluxo_completo_retorna_pii_result(tmp_path) -> None:
     result = flow.run(str(img))
 
     assert "pii_result" in result
-    assert hasattr(result["pii_result"], "tem_pii")
+    assert hasattr(result["pii_result"], "has_pii")
 
 
 # ── PII mascarado antes de chamar a API ─────────────────────────────────────
@@ -117,7 +117,7 @@ def test_pii_detectado_nao_vaza_para_api(tmp_path) -> None:
     img = tmp_path / "pedido.jpg"
     img.write_bytes(b"\xff\xd8")
 
-    pii_result = _make_pii_result(tem_pii=True)
+    pii_result = _make_pii_result(has_pii=True)
     http = MagicMock()
     http.post.return_value = _mock_http_response()
 
@@ -145,12 +145,12 @@ def test_pii_resultado_presente_no_retorno_com_pii(tmp_path) -> None:
     img = tmp_path / "pedido.jpg"
     img.write_bytes(b"\xff\xd8")
 
-    pii_result = _make_pii_result(tem_pii=True)
+    pii_result = _make_pii_result(has_pii=True)
     flow = _build_flow(pii_result=pii_result)
     result = flow.run(str(img))
 
-    assert result["pii_result"].tem_pii is True
-    assert result["pii_result"].total_entidades == 2
+    assert result["pii_result"].has_pii is True
+    assert result["pii_result"].total_entities == 2
 
 
 # ── Erro de conexão com a API ────────────────────────────────────────────────

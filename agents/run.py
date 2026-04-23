@@ -62,11 +62,11 @@ def main() -> None:
     schedule = result["schedule_response"]
 
     # Aviso de PII
-    if pii_result.tem_pii:
+    if pii_result.has_pii:
         print(
-            f"\n  ⚠  {pii_result.total_entidades} dado(s) sensível(is) detectado(s) e mascarado(s)."
+            f"\n  ⚠  {pii_result.total_entities} dado(s) sensível(is) detectado(s) e mascarado(s)."
         )
-        tipos = sorted({e.tipo for e in pii_result.entidades})
+        tipos = sorted({e.type for e in pii_result.entities})
         print(f"     Tipos: {', '.join(tipos)}")
 
     # Exames encontrados

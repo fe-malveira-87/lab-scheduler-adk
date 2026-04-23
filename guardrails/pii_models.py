@@ -2,24 +2,24 @@ from pydantic import BaseModel, computed_field
 
 
 class PIIEntity(BaseModel):
-    tipo: str
-    valor_original: str
-    valor_mascarado: str
-    posicao_inicio: int
-    posicao_fim: int
+    type: str
+    original: str
+    masked: str
+    start: int
+    end: int
 
 
 class PIIResult(BaseModel):
-    texto_original: str
-    texto_anonimizado: str
-    entidades: list[PIIEntity] = []
+    original_text: str
+    masked_text: str
+    entities: list[PIIEntity] = []
 
     @computed_field
     @property
-    def total_entidades(self) -> int:
-        return len(self.entidades)
+    def total_entities(self) -> int:
+        return len(self.entities)
 
     @computed_field
     @property
-    def tem_pii(self) -> bool:
-        return len(self.entidades) > 0
+    def has_pii(self) -> bool:
+        return len(self.entities) > 0
