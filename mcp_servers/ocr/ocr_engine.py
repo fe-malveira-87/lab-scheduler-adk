@@ -20,23 +20,32 @@ class OCREngine:
             logger.warning("GOOGLE_API_KEY not set, returning mock exam list")
             return _MOCK_EXAMS
 
-        import google.generativeai as genai
+        from google import genai
+        from google.genai import types
 
-        genai.configure(api_key=api_key)
+        client = genai.Client(api_key=api_key)
 
         with open(image_path, "rb") as f:
             image_data = base64.b64encode(f.read()).decode("utf-8")
 
         ext = image_path.rsplit(".", 1)[-1].lower()
-        mime_map = {"jpg": "image/jpeg", "jpeg": "image/jpeg", "png": "image/png", "webp": "image/webp"}
+        mime_map = {
+            "jpg": "image/jpeg",
+            "jpeg": "image/jpeg",
+            "png": "image/png",
+            "webp": "image/webp",
+        }
         mime_type = mime_map.get(ext, "image/jpeg")
 
-        model = genai.GenerativeModel("gemini-1.5-flash")
-        response = model.generate_content(
-            [
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=[
                 _PROMPT,
-                {"mime_type": mime_type, "data": image_data},
-            ]
+                types.Part.from_bytes(
+                    data=base64.b64decode(image_data),
+                    mime_type=mime_type,
+                ),
+            ],
         )
 
         lines = [line.strip() for line in response.text.splitlines() if line.strip()]
