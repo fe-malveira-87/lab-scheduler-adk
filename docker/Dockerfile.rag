@@ -6,7 +6,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 WORKDIR /app
 
 # Copiar manifesto e instalar dependências (camada cacheável)
-COPY pyproject.toml ./
+COPY pyproject.toml README.md ./
 RUN uv sync --no-dev --no-install-project
 
 # Copiar código fonte
