@@ -96,7 +96,7 @@ uv run pytest -v
 uv run python -m transpiler.cli examples/exam_spec.json
 
 # rodar o agente completo com uma imagem
-uv run python -m agents.run examples/test_image.png
+uv run python -m agents.run examples/test_image_manuscrito.jpg
 ```
 
 ---
@@ -121,6 +121,7 @@ Documentação interativa em `http://localhost:8000/docs`.
 - [Swagger /docs](docs/evidencias/05-swagger.png)
 - [API curl](docs/evidencias/06-api-curl.png)
 - [Agente CLI — fluxo completo](docs/evidencias/08-agente-cli.png)
+- [OCR com escrita manuscrita real](docs/evidencias/10-ocr-manuscrito-real.png)
 
 ---
 
