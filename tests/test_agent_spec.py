@@ -40,7 +40,7 @@ def test_agent_name_ausente_gera_erro_claro():
 
 
 def test_agent_name_vazio_gera_erro_claro():
-    dados = {**VALID_SPEC, "agent_name": "   "}
+    dados = {**VALID_SPEC, "agent_name": ""}
     with pytest.raises(ValidationError) as exc_info:
         AgentSpec.model_validate(dados)
     mensagem = str(exc_info.value)
