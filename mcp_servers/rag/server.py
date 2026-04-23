@@ -9,7 +9,7 @@ from mcp_servers.rag.rag_engine import RAGEngine
 configure_logging()
 logger = logging.getLogger(__name__)
 
-mcp = FastMCP("rag-server")
+mcp = FastMCP("rag-server", host="0.0.0.0", port=8002)
 _engine = RAGEngine()
 
 
@@ -22,4 +22,4 @@ def search_exams(query: str, top_k: int = 5) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="sse", host="0.0.0.0", port=8002)
+    mcp.run(transport="sse")

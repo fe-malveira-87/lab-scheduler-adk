@@ -9,7 +9,7 @@ from mcp_servers.ocr.ocr_engine import OCREngine
 configure_logging()
 logger = logging.getLogger(__name__)
 
-mcp = FastMCP("ocr-server")
+mcp = FastMCP("ocr-server", host="0.0.0.0", port=8001)
 _engine = OCREngine()
 
 
@@ -22,4 +22,4 @@ def extract_exams_from_image(image_path: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="sse", host="0.0.0.0", port=8001)
+    mcp.run(transport="sse")
