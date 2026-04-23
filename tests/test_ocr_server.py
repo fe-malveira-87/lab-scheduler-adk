@@ -37,13 +37,11 @@ def test_returns_list_from_gemini_response(monkeypatch, tmp_path):
     mock_response = MagicMock()
     mock_response.text = "Hemograma Completo\nUrina I\nCreatinina"
 
-    mock_model = MagicMock()
-    mock_model.generate_content.return_value = mock_response
-
+    mock_types = MagicMock()
     mock_genai = MagicMock()
-    mock_genai.GenerativeModel.return_value = mock_model
+    mock_genai.Client.return_value.models.generate_content.return_value = mock_response
 
-    with patch.dict("sys.modules", {"google.generativeai": mock_genai}):
+    with patch.dict("sys.modules", {"google.genai": mock_genai, "google.genai.types": mock_types}):
         engine = OCREngine()
         result = engine.extract(str(fake_image))
 
@@ -59,13 +57,11 @@ def test_gemini_result_is_list_of_strings(monkeypatch, tmp_path):
     mock_response = MagicMock()
     mock_response.text = "TSH\nT4 Livre"
 
-    mock_model = MagicMock()
-    mock_model.generate_content.return_value = mock_response
-
+    mock_types = MagicMock()
     mock_genai = MagicMock()
-    mock_genai.GenerativeModel.return_value = mock_model
+    mock_genai.Client.return_value.models.generate_content.return_value = mock_response
 
-    with patch.dict("sys.modules", {"google.generativeai": mock_genai}):
+    with patch.dict("sys.modules", {"google.genai": mock_genai, "google.genai.types": mock_types}):
         engine = OCREngine()
         result = engine.extract(str(fake_image))
 
