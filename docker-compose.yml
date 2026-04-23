@@ -1,9 +1,45 @@
-version: "3.12"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    env_file: .env
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - lab-network
 
-# Serviços que serão adicionados:
-#   - ocr-mcp:   servidor MCP de OCR via SSE (porta 8001)
-#   - rag-mcp:   servidor MCP de RAG via SSE (porta 8002)
-#   - api:       FastAPI de agendamento (porta 8000)
-#   - chromadb:  banco vetorial (porta 8003) — opcional
+  ocr-mcp:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.ocr
+    ports:
+      - "8001:8001"
+    env_file: .env
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - lab-network
 
-services: {}
+  rag-mcp:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.rag
+    ports:
+      - "8002:8002"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - lab-network
+
+networks:
+  lab-network:
+    driver: bridge
